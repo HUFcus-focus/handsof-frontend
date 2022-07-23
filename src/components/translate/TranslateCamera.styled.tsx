@@ -18,5 +18,5 @@ export const CameraBtn = styled.div`
 export const UserOff = styled.div`
   position: absolute;
   bottom: 200px;
-  left: 5px;
+  left: 10px;
 `;
