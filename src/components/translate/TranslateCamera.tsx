@@ -6,15 +6,22 @@ import * as tf from "@tensorflow/tfjs";
 
 // https://www.npmjs.com/package/react-webcam
 
-const TranslateCamera = () => {
+const TranslateCamera = (props) => {
   const [camera, setCamera] = useState(false);
-  const [text, setText] = useState("");
 
   const videoConstraints = {
     width: 274,
     height: 434,
     facingMode: "user",
   };
+
+  const labelMap = [
+    "안녕하세요!",
+    "감사해요 :)",
+    "사랑해요 :>",
+    "좋아요!!",
+    "힘들 것 같아요 :(",
+  ];
 
   const webcamElementRef = useRef(null);
 
@@ -24,50 +31,41 @@ const TranslateCamera = () => {
     );
     setInterval(() => {
       detect(net);
-    }, 100);
-  };
+    }, 50);
 
-  const detect = async (net) => {
-    if (
-      typeof webcamElementRef.current !== "undefined" &&
-      webcamElementRef.current !== null &&
-      webcamElementRef.current.video.readyState === 4
-    ) {
-      const video = webcamElementRef.current.video;
+    const detect = async (net) => {
+      if (
+        typeof webcamElementRef.current !== "undefined" &&
+        webcamElementRef.current !== null &&
+        webcamElementRef.current.video.readyState === 4
+      ) {
+        const video = webcamElementRef.current.video;
 
-      const img = tf.browser.fromPixels(video);
-      const resized = tf.image.resizeBilinear(img, [274, 434]);
-      const casted = resized.cast("int32");
-      const expanded = casted.expandDims(0);
-      const obj = await net.executeAsync(expanded);
+        const img = tf.browser.fromPixels(video);
+        const resized = tf.image.resizeBilinear(img, [274, 434]);
+        const casted = resized.cast("int32");
+        const expanded = casted.expandDims(0);
+        const obj = await net.executeAsync(expanded);
 
-      const boxes = await obj[1].array();
-      const classes = await obj[2].array();
-      const scores = await obj[4].array();
+        const boxes = await obj[1].array();
+        const classes = await obj[2].array();
+        const scores = await obj[4].array();
 
-      const labelMap = {
-        1: "안녕하세요!",
-        2: "감사해요 :)",
-        3: "사랑해요 :>",
-        4: "좋아요!!",
-        5: "힘들 것 같아요 :(",
-      };
-
-      for (let i = 0; i <= boxes[0].length; i++) {
-        console.log(scores[0][i]);
-        if (boxes[0][i] && classes[0][i] && scores[0][i] > 0.8) {
-          setText(labelMap[classes[0][i]]);
-          console.log(text);
-          break;
+        for (let i = 0; i <= boxes[0].length; i++) {
+          if (boxes[0][i] && classes[0][i] && scores[0][i] > 0.6) {
+            console.log(labelMap[classes[0][i] - 1]);
+            props.setText(labelMap[classes[0][i] - 1]);
+            break;
+          }
         }
-      }
 
-      tf.dispose(img);
-      tf.dispose(resized);
-      tf.dispose(casted);
-      tf.dispose(expanded);
-      tf.dispose(obj);
-    }
+        tf.dispose(img);
+        tf.dispose(resized);
+        tf.dispose(casted);
+        tf.dispose(expanded);
+        tf.dispose(obj);
+      }
+    };
   };
 
   useEffect(() => {
