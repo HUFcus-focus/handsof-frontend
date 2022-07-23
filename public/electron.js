@@ -8,8 +8,8 @@ var baseUrl = "http://localhost:3000";
 var mainWindow;
 function createMainWindow() {
     mainWindow = new electron_1.BrowserWindow({
-        width: 1080,
-        height: 700,
+        width: 1180,
+        height: 750,
         icon: __dirname + "/favicon.ico",
         webPreferences: {
             nodeIntegration: true

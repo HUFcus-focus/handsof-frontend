@@ -12,11 +12,11 @@ export const CameraBtn = styled.div`
   cursor: pointer;
   position: absolute;
   bottom: 30px;
-  left: 280px;
+  left: 270px;
 `;
 
 export const UserOff = styled.div`
   position: absolute;
   bottom: 200px;
-  left: 15px;
+  left: 5px;
 `;

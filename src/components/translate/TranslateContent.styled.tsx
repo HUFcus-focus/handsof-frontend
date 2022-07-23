@@ -4,7 +4,7 @@ export const TranslateContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 40px;
-  margin-left: 175px;
+  margin-left: 165px;
   align-items: center;
 `;
 
