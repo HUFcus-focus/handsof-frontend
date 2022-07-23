@@ -10,3 +10,7 @@ export { ReactComponent as CopySVG } from "assets/svg/copy.svg";
 export { ReactComponent as CameraOffSVG } from "assets/svg/camera_off.svg";
 export { ReactComponent as CameraOnSVG } from "assets/svg/camera_on.svg";
 export { ReactComponent as UserOffSVG } from "assets/svg/user_off.svg";
+export { ReactComponent as CancelSVG } from "assets/svg/cancel.svg";
+export { ReactComponent as AccountSVG } from "assets/svg/account.svg";
+export { ReactComponent as VideoSVG } from "assets/svg/video.svg";
+export { ReactComponent as DownSVG } from "assets/svg/down.svg";

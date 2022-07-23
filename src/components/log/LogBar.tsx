@@ -1,12 +1,12 @@
 import * as S from "components/log/LogBar.styled";
-import { slack, google, jandi, kakao, discord, gmail, add } from "assets/img";
+import { o_slack, google, jandi, kakao, discord, gmail, add } from "assets/img";
 
 const LogBar = () => {
   return (
     <S.LogBarContainer>
       <S.LogBarItem
-        src={slack}
-        alt="slack"
+        src={o_slack}
+        alt="o_slack"
         width={"49px"}
         height={"49px"}
       ></S.LogBarItem>
