@@ -5,7 +5,6 @@ export const NavbarContainer = styled.div`
   left: 0px;
   top: 60px;
   width: 77px;
-  height: 100%;
   border-right: 1px solid #ededed;
 `;
 
