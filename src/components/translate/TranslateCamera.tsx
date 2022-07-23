@@ -1,8 +1,8 @@
 import { CameraOffSVG, CameraOnSVG, UserOffSVG } from "assets/svg";
 import * as S from "components/translate/TranslateCamera.styled";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
-// import * as tf from "@tensorflow/tfjs";
+import * as tf from "@tensorflow/tfjs";
 
 // https://www.npmjs.com/package/react-webcam
 
@@ -17,21 +17,21 @@ const TranslateCamera = (props) => {
 
   const webcamElementRef = useRef(null);
 
-  /* const labelMap = [
+  const labelMap = [
     "안녕하세요!",
     "감사해요 :)",
     "사랑해요 :>",
     "좋아요!!",
     "힘들 것 같아요 :(",
-  ]; 
+  ];
 
-    const runCoco = async () => {
+  const runCoco = async () => {
     const net = await tf.loadGraphModel(
       "https://handsof-model.s3.ap-northeast-2.amazonaws.com/model.json"
     );
     setInterval(() => {
       detect(net);
-    }, 50);
+    }, 2500);
 
     const detect = async (net) => {
       if (
@@ -66,11 +66,11 @@ const TranslateCamera = (props) => {
         tf.dispose(obj);
       }
     };
-  }; 
+  };
 
   useEffect(() => {
     runCoco();
-  }, []); */
+  }, []);
 
   return (
     <S.CameraContainer>
