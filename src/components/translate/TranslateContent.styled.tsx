@@ -8,20 +8,6 @@ export const TranslateContentContainer = styled.div`
   align-items: center;
 `;
 
-export const CameraContainer = styled.div`
-  width: 274px;
-  height: 434px;
-  border-radius: 10px;
-  box-shadow: -1px 6px 14px 3px rgba(88, 88, 88, 0.1);
-`;
-
-export const CameraBtn = styled.div`
-  cursor: pointer;
-  position: absolute;
-  bottom: 30px;
-  left: 280px;
-`;
-
 export const TranslationContainer = styled.div`
   border-radius: 10px;
   box-shadow: -1px 6px 14px 3px rgba(88, 88, 88, 0.1);
@@ -37,7 +23,7 @@ export const ResultText = styled.div`
   font-size: 25px;
   color: rgba(101, 103, 109, 0.15);
   line-height: 35px;
-  max-width: 341px;
+  max-width: 350px;
   margin-left: 35px;
   padding-top: 35px;
 `;
