@@ -5,3 +5,18 @@ export const Container = styled.div`
   left: 77px;
   width: 100%;
 `;
+
+export const Title = styled.div`
+  font-size: 30px;
+  font-weight: 800;
+
+  color: #65676d;
+  margin-left: 170px;
+  margin-top: 25px;
+`;
+
+export const TitleLine = styled.div`
+  width: 754px;
+  border-top: solid 2px #ededed;
+  margin-top: 19px;
+`;
