@@ -1,6 +1,7 @@
 import * as S from "components/translate/TranslateContent.styled";
 import { Title, TitleLine } from "components/common/shared";
-import { ArrowRightSVG, RefreshSVG, CopySVG, CameraOffSVG } from "assets/svg";
+import { ArrowRightSVG, RefreshSVG, CopySVG } from "assets/svg";
+import { TranslateCamera } from "components/translate";
 
 const TranslateContent = () => (
   <>
@@ -9,11 +10,7 @@ const TranslateContent = () => (
       <TitleLine />
     </Title>
     <S.TranslateContentContainer>
-      <S.CameraContainer>
-        <S.CameraBtn>
-          <CameraOffSVG />
-        </S.CameraBtn>
-      </S.CameraContainer>
+      <TranslateCamera />
       <ArrowRightSVG />
       <S.TranslationContainer>
         <S.ResultBox>
