@@ -9,9 +9,8 @@ export const Container = styled.div`
 export const Title = styled.div`
   font-size: 30px;
   font-weight: 800;
-
   color: #65676d;
-  margin-left: 170px;
+  margin-left: 160px;
   margin-top: 25px;
 `;
 

@@ -10,8 +10,8 @@ let mainWindow: BrowserWindow | null;
 
 function createMainWindow(): void {
   mainWindow = new BrowserWindow({
-    width: 1080,
-    height: 700,
+    width: 1180,
+    height: 750,
     icon: __dirname + "/favicon.ico",
     webPreferences: {
       nodeIntegration: true,
