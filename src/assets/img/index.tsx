@@ -1,1 +1,1 @@
-export { default as rabbit } from "assets/img/rabbit.jpg";
+export { default as mainImage } from "assets/img/main_image.png";
