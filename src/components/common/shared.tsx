@@ -5,3 +5,5 @@ export const Container = styled.div`
   left: 77px;
   width: 100%;
 `;
+
+export const Title = styled.div``;
