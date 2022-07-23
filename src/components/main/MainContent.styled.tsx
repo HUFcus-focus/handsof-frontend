@@ -27,5 +27,5 @@ export const BtnContainer = styled.div`
 `;
 
 export const MainImageContainer = styled.img`
-  margin-right: 80px;
+  margin-right: 85px;
 `;
