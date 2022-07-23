@@ -1,38 +1,39 @@
 import * as S from "components/log/LogContent.styled";
 import { Title, TitleLine } from "components/common/shared";
 import { LogMessage } from "components/log";
+import { useState, useEffect } from "react";
 
-const LogContent = () => (
-  <>
-    <Title>
-      채팅 목록<span style={{ color: "#F4BF4F" }}>.</span>
-      <TitleLine />
-    </Title>
-    <S.LogContentContainer>
-      <LogMessage
-        date={"2022.07.01 9:16"}
-        text={
-          "두기 반짝이는 이상의 많이 내려온 풀이 투명하되 있으랴? 보이는 얼마나 장식하는 청춘 피어나는 있다. 불러 곳으로 같으며, 청춘을 구하지 불어 싸인 가슴에 길지 황금시대다. 천고에 끓는 무엇을 트고, 칼이다. 이상의 꽃이 가치를 것이다. 인생의 천자만홍이 동력은 천지는 교향악이다."
-        }
-      />
-      <LogMessage
-        date={"2022.07.01 10:23"}
-        text={
-          "문서 확인 부탁드립니다. 구글 드라이브 보시면 제가 회의록 폴더 내에 정리해두었습니다."
-        }
-      />
-      <LogMessage
-        date={"2022.07.01 15:02"}
-        text={"몇 개 남았는지 기억이 나지 않네요. 재고 확인해보겠습니다."}
-      />
-      <LogMessage
-        date={"2022.07.01 21:38"}
-        text={
-          "이상의 꽃이 가치를 것이다. 인생의 천자만홍이 동력은 천지는 교향악이다. 때에, 어디 고행을 기관과 것이다. 얼마나 이상의 노래하며 위하여서 대한 사막이다. 트고, 우리 실현에 사막이다. 고행을 속잎나고, 것은 용감하고 봄바람이다. 이상의 꽃이 가치를 것이다. 인생의 천자만홍이 동력은 천지는 교향악이다. 때에, 어디 고행을 기관과 것이다. 얼마나 이상의 노래하며 위하여서 대한 사막이다. 트고, 우리 실현에 사막이다. 고행을 속잎나고, 것은 용감하고 봄바람이다. 이상의 꽃이 가치를 것이다. 인생의 천자만홍이 동력은 천지는 교향악이다. 때에, 어디 고행을 기관과 것이다. 얼마나 이상의 노래하며 위하여서 대한 사막이다. 트고, 우리 실현에 사막이다. 고행을 속잎나고, 것은 용감하고 봄바람이다. 이상의 꽃이 가치를 것이다. 인생의 천자만홍이 동력은 천지는 교향악이다. 때에, 어디 고행을 기관과 것이다. 얼마나 이상의 노래하며 위하여서 대한 사막이다. 트고, 우리 실현에 사막이다. 고행을 속잎나고, 것은 용감하고 봄바람이다. 어디 고행을 기관과 것이다. 얼마나 이상의 노래하며 위하여서 대한 사막이다. 트고, 우리 실현에 사막이다. 고행을 속잎나고, 것은 용감하고 봄바람이다."
-        }
-      />
-    </S.LogContentContainer>
-  </>
-);
+const LogContent = () => {
+  const [messageList, setMessageList] = useState([]);
+
+  /* useEffect(() => {
+    fetch("https://api.handsof.today/chat/slack/62dbd9ba9e804cba2f19ea16", {})
+      .then((response) => response.json())
+      .then((data) => {
+        setMessageList(data);
+      });
+  }, []); */
+
+  return (
+    <>
+      <Title>
+        채팅 목록<span style={{ color: "#F4BF4F" }}>.</span>
+        <TitleLine />
+      </Title>
+      <S.LogContentContainer>
+        {/* {messageList.map((e) => (
+          <LogMessage key={e.id} date={e.createdAt} text={e.message} />
+        ))} */}
+        <LogMessage date={"2022.07.24 21:38"} text={"힘들 것 같아요 :("} />
+        <LogMessage date={"2022.07.23 9:16"} text={"좋아요!!"} />
+        <LogMessage date={"2022.07.23 7:41"} text={"안녕하세요!"} />
+        <LogMessage date={"2022.07.22 9:16"} text={"사랑해요 :>"} />
+        <LogMessage date={"2022.07.21 17:32"} text={"감사해요 :)"} />
+        <LogMessage date={"2022.07.24 21:38"} text={"힘들 것 같아요 :("} />
+        <LogMessage date={"2022.07.19 17:21"} text={"안녕하세요!"} />
+      </S.LogContentContainer>
+    </>
+  );
+};
 
 export default LogContent;
