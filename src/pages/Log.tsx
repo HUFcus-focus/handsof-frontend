@@ -1,17 +1,14 @@
 import { Header, Navbar } from "components/common";
 import { Container } from "components/common/shared";
-import { MainContent } from "components/main";
 
-const Main = () => {
+const Log = () => {
   return (
     <>
       <Header />
       <Navbar />
-      <Container>
-        <MainContent />
-      </Container>
+      <Container>Log</Container>
     </>
   );
 };
 
-export default Main;
+export default Log;
