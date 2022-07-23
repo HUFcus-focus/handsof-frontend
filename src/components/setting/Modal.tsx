@@ -38,5 +38,5 @@ export const Popup = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   width: 439px;
-  height: 490px;
+  height: 480px;
 `;

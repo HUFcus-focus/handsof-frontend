@@ -2,7 +2,7 @@ import * as S from "components/common/Header.styled";
 import { LogoSVG, SettingSVG } from "assets/svg";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <S.HeaderContainer>
       <S.LogoContainer>
@@ -10,7 +10,7 @@ const Header = () => {
           <LogoSVG />
         </Link>
       </S.LogoContainer>
-      <S.SettingButtonContainer>
+      <S.SettingButtonContainer onClick={() => props.setModal(true)}>
         <SettingSVG />
       </S.SettingButtonContainer>
     </S.HeaderContainer>

@@ -16,8 +16,8 @@ const AppRouter = () => {
     <>
       <BrowserRouter>
         <Suspense fallback={<></>}>
-          {modal && <SettingModal />}
-          <Header />
+          {modal && <SettingModal setModal={setModal} />}
+          <Header setModal={setModal} />
           <Navbar />
           <Routes>
             <Route path="/" element={<Main />} />
