@@ -8,3 +8,5 @@ export { ReactComponent as ArrowRightSVG } from "assets/svg/arrow_right.svg";
 export { ReactComponent as RefreshSVG } from "assets/svg/refresh.svg";
 export { ReactComponent as CopySVG } from "assets/svg/copy.svg";
 export { ReactComponent as CameraOffSVG } from "assets/svg/camera_off.svg";
+export { ReactComponent as CameraOnSVG } from "assets/svg/camera_on.svg";
+export { ReactComponent as UserOffSVG } from "assets/svg/user_off.svg";
