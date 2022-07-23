@@ -12,6 +12,7 @@ function createMainWindow(): void {
   mainWindow = new BrowserWindow({
     width: 1080,
     height: 700,
+    icon: __dirname + "/favicon.ico",
     webPreferences: {
       nodeIntegration: true,
     },

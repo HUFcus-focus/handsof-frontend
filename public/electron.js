@@ -10,6 +10,7 @@ function createMainWindow() {
     mainWindow = new electron_1.BrowserWindow({
         width: 1080,
         height: 700,
+        icon: __dirname + "/favicon.ico",
         webPreferences: {
             nodeIntegration: true
         }
