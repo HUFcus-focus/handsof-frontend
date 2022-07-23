@@ -14,7 +14,6 @@ export const LogBarContainer = styled.div`
 
 export const LogBarItem = styled.img`
   margin-top: 50px;
-  cursor: pointer;
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 `;
