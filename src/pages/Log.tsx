@@ -1,12 +1,13 @@
 import { Header, Navbar } from "components/common";
 import { Container } from "components/common/shared";
-import { LogContent } from "components/log";
+import { LogContent, LogBar } from "components/log";
 
 const Log = () => {
   return (
     <>
       <Header />
       <Navbar />
+      <LogBar />
       <Container>
         <LogContent />
       </Container>
