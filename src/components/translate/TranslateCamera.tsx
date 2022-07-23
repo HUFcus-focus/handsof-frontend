@@ -68,9 +68,9 @@ const TranslateCamera = (props) => {
     };
   };
 
-  useEffect(() => {
-    runCoco();
-  }, []);
+  // useEffect(() => {
+  //   runCoco();
+  // }, []);
 
   return (
     <S.CameraContainer>
