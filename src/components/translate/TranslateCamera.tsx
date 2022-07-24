@@ -70,7 +70,7 @@ const TranslateCamera = (props) => {
 
   useEffect(() => {
     runCoco();
-  }, []);
+  });
 
   return (
     <S.CameraContainer>
